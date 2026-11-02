@@ -1,0 +1,28 @@
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char data[50], out[100];
+    int i, j = 0;
+
+    printf("Enter data: ");
+    scanf("%s", data);
+
+    out[j++] = 'F';
+
+    for(i = 0; i < strlen(data); i++) {
+        if(data[i] == 'F' || data[i] == 'E')
+            out[j++] = 'E';
+        out[j++] = data[i];
+    }
+
+    out[j++] = 'F';
+    out[j] = '\0';
+
+    printf("Stuffed data: %s", out);
+    return 0;
+}
+#output
+Enter data: ABFC
+Stuffed data: FABEFCF
