@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int i, n;
+    float data[50], sum = 0;
+
+    printf("Enter number of records: ");
+    scanf("%d", &n);
+
+    printf("Enter dataset values:\n");
+    for(i = 0; i < n; i++) {
+        scanf("%f", &data[i]);
+        sum += data[i];
+    }
+
+    printf("\nDataset Analysis\n");
+    printf("Total records = %d\n", n);
+    printf("Sum = %.2f\n", sum);
+    printf("Average = %.2f\n", sum/n);
+
+    return 0;
+}
+#output
+Enter number of records: 5
+Enter dataset values:
+10 20 30 40 50
+
+Dataset Analysis
+Total records = 5
+Sum = 150.00
+Average = 30.00
